@@ -1,0 +1,196 @@
+/* Hero Section CSS */
+
+.hero-container {
+  background-image: url('../assets/hero.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: -50px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtitle {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: 65px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 5px 0 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 35px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-call {
+  background-color: #81d742;
+}
+
+.btn-whatsapp {
+  background-color: #dfa648;
+}
+
+/* Features bar */
+.features-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #4380f0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 5;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.feature-icon {
+  font-size: 24px;
+  border: 2px solid rgba(255,255,255,0.5);
+  padding: 5px;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    height: auto;
+    min-height: 120vh;      
+    padding: 100px 20px 40px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-top: 0;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .sub-heading {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 20px;
+    justify-content: center;
+  }
+
+
+  .features-bar {
+    position: static;
+    margin-top: 40px;
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .feature-item {
+    justify-content: center;
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 32px;
+  }
+
+  .sub-heading {
+    font-size: 24px;
+  }
+
+  .feature-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .feature-item span {
+    font-size: 12px;
+  }
+}
